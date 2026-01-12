@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheros Console - Space Settlement Design Analytics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a3a52 100%);
+            color: #e0e7ff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 2px solid #00d9ff;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 217, 255, 0.1);
+        }
+        
+        h1 {
+            color: #00d9ff;
+            font-size: 3em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+        }
+        
+        .subtitle {
+            color: #a5f3fc;
+            font-size: 1.2em;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .welcome-section {
+            background: rgba(30, 58, 138, 0.6);
+            border: 2px solid #00d9ff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 217, 255, 0.2);
+        }
+        
+        .welcome-section h2 {
+            color: #00d9ff;
+            margin-bottom: 1rem;
+            font-size: 1.8em;
+        }
+        
+        .welcome-section p {
+            margin-bottom: 1rem;
+            font-size: 1.05em;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid #06b6d4;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(0, 217, 255, 0.15);
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
+        }
+        
+        .feature-card h3 {
+            color: #00d9ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-section {
+            background: rgba(30, 58, 138, 0.6);
+            border: 1px solid #06b6d4;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .info-section h2 {
+            color: #00d9ff;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #00d9ff 0%, #06b6d4 100%);
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(0, 217, 255, 0.1);
+            border: 2px solid #00d9ff;
+            color: #00d9ff;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 217, 255, 0.2);
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid #00d9ff;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+            color: #a5f3fc;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        .logo {
+            font-size: 2em;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🚀</div>
+        <h1>AETHEROS CONSOLE</h1>
+        <p class="subtitle">Advanced Analytics & Design Visualization Platform</p>
+        <p>NSS Gerard K. O'Neill Space Settlement Design Competition</p>
+    </header>
+    
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Welcome to Aetheros Console</h2>
+            <p>Aetheros is a comprehensive entry to the National Space Society (NSS) Gerard K. O'Neill Space Settlement Design Competition. Our console provides advanced analytics and real-time data visualization for space settlement design parameters.</p>
+            <p>This platform enables researchers and designers to analyze critical metrics for a sustainable, rotating torus space habitat, including life support systems, structural parameters, and resource management data.</p>
+        </div>
+        
+        <div class="info-section">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>📊 Real-time Analytics</h3>
+                    <p>Monitor and analyze project metrics with live-updating dashboards designed for space settlement operations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 Data Visualization</h3>
+                    <p>Interactive charts and graphs for comprehensive project analysis and performance tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛠️ Design Metrics</h3>
+                    <p>Track habitat design parameters, life support systems, and resource management indicators.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Responsive Interface</h3>
+                    <p>Access the platform across all devices with a modern, intuitive web interface.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Project Tracking</h3>
+                    <p>Monitor milestones, team progress, and project performance metrics in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Collaboration Tools</h3>
+                    <p>Enable seamless team coordination for design and development of space settlements.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>About the Aetheros Design</h2>
+            <p>Aetheros envisions a rotating torus configuration featuring:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li style="margin: 0.5rem 0;">Advanced radiation shielding for long-term habitability</li>
+                <li style="margin: 0.5rem 0;">Artificial gravity through rotation at optimal parameters</li>
+                <li style="margin: 0.5rem 0;">Sustainable agricultural and manufacturing systems</li>
+                <li style="margin: 0.5rem 0;">Multi-zone habitat design for diverse activities</li>
+                <li style="margin: 0.5rem 0;">Robust communication systems for Earth connectivity</li>
+                <li style="margin: 0.5rem 0;">Self-sufficient life support and resource cycles</li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>Technologies Used</h2>
+            <p><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS</p>
+            <p><strong>Data Visualization:</strong> Custom JavaScript visualizations and charting libraries</p>
+            <p><strong>Hosting:</strong> GitHub Pages + Firebase (Backend)</p>
+            <p><strong>Version Control:</strong> Git & GitHub</p>
+        </div>
+        
+        <div class="btn-group">
+            <a href="https://github.com/gottimukulasaisaathvik-cloud/AetherosConsole" class="btn">View on GitHub</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p><strong>Aetheros: Designing the Future of Human Space Settlement</strong></p>
+        <p>Part of the NSS Gerard K. O'Neill Space Settlement Design Competition</p>
+        <p style="margin-top: 1rem; font-size: 0.9em;">© 2026 Aetheros Team | Hosted on GitHub Pages with custom domain</p>
+        <p style="font-size: 0.8em; color: #06b6d4;">Project Repository: <a href="https://github.com/gottimukulasaisaathvik-cloud/AetherosConsole" style="color: #00d9ff; text-decoration: none;">gottimukulasaisaathvik-cloud/AetherosConsole</a></p>
+    </footer>
+</body>
+</html>
