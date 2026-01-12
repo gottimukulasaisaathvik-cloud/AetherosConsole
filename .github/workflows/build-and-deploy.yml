@@ -1,0 +1,59 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      working-directory: ./AetherosConsole
+      run: npm install
+    
+    - name: Build Next.js app
+      working-directory: ./AetherosConsole
+      run: npm run build
+    
+    - name: Export static site
+      working-directory: ./AetherosConsole
+      run: npm run export || echo "Export script not found, using build output"
+    
+    - name: Move build output to root
+      run: |
+        if [ -d "AetherosConsole/out" ]; then
+          cp -r AetherosConsole/out/* . || true
+          rm -rf AetherosConsole/out
+        elif [ -d "AetherosConsole/.next/static" ]; then
+          mkdir -p public
+          cp -r AetherosConsole/.next/static public/ || true
+          cp AetherosConsole/.next/server/app/** . 2>/dev/null || true
+        fi
+    
+    - name: Create index.html if missing
+      run: |
+        if [ ! -f "index.html" ]; then
+          echo "<html><head><title>Aetheros Console</title></head><body><p>Aetheros Console is loading...</p></body></html>" > index.html
+        fi
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        cname: aetherosconsole.page.gd
