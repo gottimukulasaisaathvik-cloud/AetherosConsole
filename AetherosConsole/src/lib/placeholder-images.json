@@ -1,0 +1,100 @@
+{
+  "placeholderImages": [
+    {
+      "id": "crew-1",
+      "description": "Commander Eva Rostova, Mission Lead",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NzQ1MDI2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "crew-2",
+      "description": "Dr. Kenji Tanaka, Science Officer",
+      "imageUrl": "https://images.unsplash.com/photo-1607031542107-f6f46b5d54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njc0NDgzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "crew-3",
+      "description": "Aria Patel, Chief Engineer",
+      "imageUrl": "https://images.unsplash.com/photo-1573497701291-18243a6dc63d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMGVuZ2luZWVyfGVufDB8fHx8MTc2NzQ5OTk0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman engineer"
+    },
+    {
+      "id": "crew-4",
+      "description": "Leo Maxwell, Pilot",
+      "imageUrl": "https://images.unsplash.com/photo-1563753130876-522091686151?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwaWxvdHxlbnwwfHx8fDE3Njc0OTk5NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man pilot"
+    },
+    {
+      "id": "crew-5",
+      "description": "Dr. Sofia Reyes, Medical Officer",
+      "imageUrl": "https://images.unsplash.com/photo-1507206130118-b5907f817163?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGRvY3RvcnxlbnwwfHx8fDE3Njc0NjM5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman doctor"
+    },
+    {
+      "id": "robot-1",
+      "description": "Personal Healthcare Assistant Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1560724797-bf78e981d20d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpY2FsJTIwcm9ib3R8ZW58MHx8fHwxNzY3NDMxMTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "medical robot"
+    },
+    {
+      "id": "robot-2",
+      "description": "Smart Learning & Tutor Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1574803442176-70d4b465c920?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlZHVjYXRpb24lMjByb2JvdHxlbnwwfHx8fDE3Njc0MzEyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "education robot"
+    },
+    {
+      "id": "robot-3",
+      "description": "Emotional Support & Social Companion Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1758850898768-90e8e5cbae30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wYW5pb24lMjByb2JvdHxlbnwwfHx8fDE3Njc0MzExNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "companion robot"
+    },
+    {
+      "id": "robot-4",
+      "description": "Emergency Evacuation & Rescue Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1609008804626-530973d91a5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZXNjdWUlMjByb2JvdHxlbnwwfHx8fDE3Njc0MzExNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rescue robot"
+    },
+    {
+      "id": "robot-5",
+      "description": "Adaptive Infrastructure Builder Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1735494034760-2c5bdf4a58bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb25zdHJ1Y3Rpb24lMjByb2JvdHxlbnwwfHx8fDE3Njc0MzExODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction robot"
+    },
+    {
+      "id": "robot-6",
+      "description": "Smart Food & Nutrition Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1655923570951-fd93db1152e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb2JvdCUyMGNoZWZ8ZW58MHx8fHwxNzY3NDMxMTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot chef"
+    },
+    {
+      "id": "robot-7",
+      "description": "Recreational & Fitness Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1614049026175-d2acb96c6a81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaXRuZXNzJTIwcm9ib3R8ZW58MHx8fHwxNzY3NDMxMjc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fitness robot"
+    },
+    {
+      "id": "robot-8",
+      "description": "Adaptive Mobility & Assistance Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1706534259630-3c33b33fd5ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZWxpdmVyeSUyMHJvYm90fGVufDB8fHx8MTc2NzQzMTE3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delivery robot"
+    },
+    {
+      "id": "robot-9",
+      "description": "Environmental Awareness & Education Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1760657061857-2dc900e0719e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzY2llbmNlJTIwcm9ib3R8ZW58MHx8fHwxNzY3NTExMzU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science robot"
+    },
+    {
+      "id": "robot-10",
+      "description": "Multi-Sensor Safety Patrol Robot",
+      "imageUrl": "https://images.unsplash.com/photo-1677867942819-aaaa6807321d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzZWN1cml0eSUyMHJvYm90fGVufDB8fHx8MTc2NzQzMTAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "security robot"
+    },
+    {
+      "id": "robot-11",
+      "description": "Quantum-Assisted Repair Swarm (QARS)",
+      "imageUrl": "https://images.unsplash.com/photo-1705635820997-ae12bea888ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuYW5vdGVjaG5vbG9neSUyMHN3YXJtfGVufDB8fHx8MTc2NzUxMTM1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nanotechnology swarm"
+    }
+  ]
+}

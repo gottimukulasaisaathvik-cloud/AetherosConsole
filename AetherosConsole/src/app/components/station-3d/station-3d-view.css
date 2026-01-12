@@ -1,0 +1,150 @@
+:root {
+  --sun-size: 80px;
+  --earth-orbit-radius: 200px;
+  --earth-size: 30px;
+  --moon-orbit-radius: 40px;
+  --moon-size: 8px;
+  --station-size: 20px;
+  --l4-offset-angle: 60deg;
+  --earth-orbit-duration: 20s;
+  --moon-orbit-duration: 2.7s;
+}
+
+.scene {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0.8;
+}
+
+.sun {
+  width: var(--sun-size);
+  height: var(--sun-size);
+  background: radial-gradient(
+    circle,
+    #FFD700 40%,
+    #FFA500 70%,
+    hsl(var(--primary) / 0) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 40px #FFA500;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed hsl(var(--border) / 0.5);
+  width: calc(var(--earth-orbit-radius) * 2);
+  height: calc(var(--earth-orbit-radius) * 2);
+  animation: rotate var(--earth-orbit-duration) linear infinite;
+}
+
+.earth {
+  width: var(--earth-size);
+  height: var(--earth-size);
+  background-color: #4A90E2;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.moon-orbit {
+  width: calc(var(--moon-orbit-radius) * 2);
+  height: calc(var(--moon-orbit-radius) * 2);
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed hsl(var(--border) / 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate var(--moon-orbit-duration) linear infinite;
+}
+
+.moon {
+  width: var(--moon-size);
+  height: var(--moon-size);
+  background-color: #A0A0A0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.l4-point {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(var(--l4-offset-angle));
+}
+
+.station {
+  position: absolute;
+  width: var(--station-size);
+  height: var(--station-size);
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  animation: counter-rotate var(--earth-orbit-duration) linear infinite;
+}
+
+@keyframes counter-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* Labels */
+.labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    font-size: 10px;
+    color: hsl(var(--muted-foreground));
+}
+
+.label-sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - var(--sun-size) / 2 - 10px));
+}
+
+.label-earth {
+    position: absolute;
+    top: calc(50% - var(--earth-orbit-radius));
+    left: 50%;
+    transform: translate(-50%, -150%);
+    animation: rotate var(--earth-orbit-duration) linear infinite;
+    transform-origin: 0px var(--earth-orbit-radius);
+}
+
+.label-moon {
+    position: absolute;
+    top: calc(50% - var(--moon-orbit-radius));
+    left: 50%;
+    transform: translate(-50%, -150%);
+    animation: rotate var(--moon-orbit-duration) linear infinite;
+    transform-origin: 0px var(--moon-orbit-radius);
+}
