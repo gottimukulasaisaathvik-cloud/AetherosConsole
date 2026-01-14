@@ -21,15 +21,12 @@ jobs:
         node-version: '18'
     
     - name: Install dependencies
-      working-directory: ./AetherosConsole
       run: npm install
     
     - name: Build Next.js app
-      working-directory: ./AetherosConsole
       run: npm run build
     
     - name: Export static site
-      working-directory: ./AetherosConsole
       run: npm run export || echo "Export script not found, using build output"
     
     - name: Move build output to root
