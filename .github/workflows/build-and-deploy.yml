@@ -15,46 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Ensure index.html exists
+      - name: Verify and prepare deployment
         run: |
-          if [ ! -f "index.html" ]; then
-            echo "Creating default index.html"
-            cat > index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aetheros Console</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0d1117;
-            color: #c9d1d9;
-        }
-        h1 { color: #58a6ff; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
-</head>
-<body>
-    <h1>Aetheros Console - Space Settlement Design Analytics</h1>
-    <p>Welcome to the Aetheros Console dashboard.</p>
-    <p>This is the analytics and visualization platform for the Aetheros space settlement design project.</p>
-    <p><a href="README.html">View Documentation</a></p>
-</body>
-</html>
-EOF
+          echo "Checking deployment files..."
+          if [ -f "index.html" ]; then
+            echo "✓ index.html found - deployment ready"
+            wc -l index.html
           else
-            echo "✓ index.html already exists"
+            echo "⚠ Warning: index.html not found"
+            echo "Creating minimal index.html..."
+            echo '<!DOCTYPE html><html><head><title>Aetheros Console</title></head><body><h1>Aetheros Console</h1><p>Analytics Dashboard</p></body></html>' > index.html
+            echo "✓ Default index.html created"
           fi
-          ls -lah index.html
-      
-      - name: Verify deployment files
-        run: |
-          echo "Checking for deployment files..."
-          test -f "index.html" && echo "✓ index.html present" || echo "✗ index.html missing"
-          echo "Repository root contents:"
-          ls -la
+          echo ""
+          echo "Repository contents:"
+          ls -lah | grep -E '^-|index.html|CNAME'
+          echo ""
+          echo "✓ Deployment verification complete"
