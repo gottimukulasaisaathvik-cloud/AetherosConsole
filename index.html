@@ -3,178 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aetheros Admin Panel</title>
+    <title>Welcome to Aetheros Console</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a3a3a 0%, #0f2a2f 50%, #1a1a2e 100%);
             min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
         }
-        
+
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        header {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
             text-align: center;
+            max-width: 900px;
+            width: 100%;
         }
-        
-        h1 {
-            color: #667eea;
-            font-size: 42px;
-            margin-bottom: 10px;
+
+        .header {
+            margin-bottom: 60px;
         }
-        
-        .subtitle {
-            color: #666;
-            font-size: 18px;
-        }
-        
-        .admin-badge {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-top: 15px;
+
+        .title {
+            font-size: 48px;
             font-weight: bold;
+            color: #00d9ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+            letter-spacing: 2px;
         }
-        
-        .dashboard {
+
+        .subtitle {
+            font-size: 20px;
+            color: #b0b0b0;
+            margin-bottom: 50px;
+        }
+
+        .role-selector {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 30px;
+            margin-bottom: 40px;
         }
-        
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #667eea;
+
+        .role-card {
+            background: rgba(20, 50, 60, 0.6);
+            border: 2px solid #00d9ff;
+            border-radius: 15px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.1);
         }
-        
-        .card h2 {
-            color: #667eea;
-            font-size: 24px;
+
+        .role-card:hover {
+            background: rgba(20, 70, 90, 0.8);
+            border-color: #00ffff;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .role-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .role-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d9ff;
             margin-bottom: 15px;
         }
-        
-        .card p {
-            color: #555;
+
+        .role-description {
+            font-size: 16px;
+            color: #a0a0a0;
             line-height: 1.6;
         }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .stat-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .stat-value {
-            font-size: 36px;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            color: #888;
+
+        .footer {
+            margin-top: 60px;
             font-size: 14px;
+            color: #606060;
         }
-        
-        footer {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            color: #666;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        .footer-link {
+            color: #00d9ff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .role-card {
+                padding: 30px;
+            }
+
+            .role-title {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Aetheros Admin Panel</h1>
-            <p class="subtitle">NSS Gerard K. O'Neill Space Settlement Design - Administration Dashboard</p>
-            <span class="admin-badge">✓ Admin Access</span>
-        </header>
-        
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-value">15</div>
-                <div class="stat-label">Design Modules</div>
+        <div class="header">
+            <h1 class="title">Welcome to Aetheros Console</h1>
+            <p class="subtitle">Please select your role to proceed.</p>
+        </div>
+
+        <div class="role-selector">
+            <div class="role-card" onclick="selectRole('admin')">
+                <span class="role-icon">🛡️</span>
+                <div class="role-title">Admin</div>
+                <p class="role-description">Access the full station management dashboard and system controls.</p>
             </div>
-            <div class="stat-box">
-                <div class="stat-value">98%</div>
-                <div class="stat-label">System Health</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-value">12</div>
-                <div class="stat-label">Active Users</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-value">47</div>
-                <div class="stat-label">Configuration Items</div>
+
+            <div class="role-card" onclick="selectRole('personnel')">
+                <span class="role-icon">👤</span>
+                <div class="role-title">Personnel</div>
+                <p class="role-description">View your schedule, tasks, and station announcements.</p>
             </div>
         </div>
-        
-        <div class="dashboard">
-            <div class="card">
-                <h2>🛠️ System Status</h2>
-                <p>All systems operational. Habitat design modules running at optimal performance. Real-time analytics dashboard active.</p>
-            </div>
-            <div class="card">
-                <h2>📊 Analytics</h2>
-                <p>Real-time data visualization showing project metrics, structural parameters, and life support system analytics.</p>
-            </div>
-            <div class="card">
-                <h2>👥 Team Management</h2>
-                <p>Manage team members, assign roles, and track project contributions. Access control and permission settings available.</p>
-            </div>
-            <div class="card">
-                <h2>🔧 Configuration</h2>
-                <p>Advanced settings for habitat design parameters. Customize simulation variables and deployment configurations.</p>
-            </div>
-            <div class="card">
-                <h2>📈 Performance Metrics</h2>
-                <p>Track key performance indicators for the Aetheros space settlement design. Monitor efficiency and resource utilization.</p>
-            </div>
-            <div class="card">
-                <h2>🔐 Security Settings</h2>
-                <p>Manage security protocols, access logs, and authentication systems. Ensure secure operations for all administrative functions.</p>
-            </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Aetheros Console | NSS Space Settlement Design</p>
+            <p>Version 2.0 - Role Selection Interface</p>
         </div>
-        
-        <footer>
-            <p>&copy; 2026 Aetheros Admin Console | NSS Space Settlement Design Competition</p>
-            <p>Last Updated: January 14, 2026 | Version 1.0 - Admin Panel</p>
-        </footer>
     </div>
+
+    <script>
+        function selectRole(role) {
+            // Store the selected role in localStorage
+            localStorage.setItem('userRole', role);
+            
+            // Display confirmation and guide user
+            const roleNames = {
+                'admin': 'Admin',
+                'personnel': 'Personnel'
+            };
+            
+            alert(`Welcome, ${roleNames[role]}! Your role has been recorded.`);
+            
+            // In a full application, this would redirect to the dashboard
+            // window.location.href = `/dashboard?role=${role}`;
+        }
+    </script>
 </body>
 </html>
